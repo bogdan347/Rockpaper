@@ -1,0 +1,41 @@
+<script>
+    
+    function getComputerChoice()
+{
+   let computerSelection;
+   let computerChoice = Math.floor(Math.random() * 3)
+   if (computerChoice === 0)
+   {
+    computerSelection = "ROCK"
+   }
+   else if(computerChoice === 1)
+   {
+    computerSelection = "PAPER"
+   }
+   else if(computerChoice === 2)
+   {
+    computerSelection = "SCISSORS"
+   }
+
+   return computerSelection
+}
+    
+    function playRound(computerSelection, playerSelection) {
+        if (computerSelection === "ROCK" && playerSelection) {
+            alert("You get a tie")
+        }
+
+        else if (computerSelection === "PAPER" && playerSelection) {
+            alert("You lose")
+        }
+
+        else if (computerSelection === "SCISSORS" && playerSelection) {
+            alert("You win")
+        }
+        
+}
+ 
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(computerSelection, playerSelection));
+</script>
